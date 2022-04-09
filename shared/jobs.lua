@@ -40,6 +40,34 @@ QBShared.Jobs = {
             },
         },
 	},
+	['firefighter'] = {
+		label = 'Firefighter',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Firefighter',
+                payment = 50
+            },
+			['1'] = {
+                name = 'Lieutenant',
+                payment = 75
+            },
+			['2'] = {
+                name = 'Captain',
+                payment = 100
+            },
+			['3'] = {
+                name = 'Assistant Chief',
+                payment = 125
+            },
+			['4'] = {
+                name = 'Fire Chief',
+				isboss = true,
+                payment = 150
+            },
+        },
+	},
 	['ambulance'] = {
 		label = 'EMS',
 		defaultDuty = true,
@@ -276,6 +304,49 @@ QBShared.Jobs = {
             ['0'] = {
                 name = 'Sales',
                 payment = 50
+            },
+        },
+	},
+
+	--Added POSJobs
+	['burgershot'] = {
+		label = 'Burger Shot',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Cook',
+                payment = 2
+            },
+						['1'] = {
+                name = 'Shift Manager',
+                payment = 3
+            },
+						['2'] = {
+                name = 'Manager',
+                payment = 3,
+								isboss = true
+            },
+        },
+	},
+	['pawn'] = {
+		label = 'Pawn Shop',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Employee',
+                payment = 2
+            },
+						['1'] = {
+                name = 'Manager',
+                payment = 3,
+								isboss = true
+            },
+						['2'] = {
+                name = 'Manager',
+                payment = 3,
+								isboss = true
             },
         },
 	},

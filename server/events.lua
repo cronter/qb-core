@@ -169,9 +169,15 @@ end)
 
 RegisterNetEvent('QBCore:Server:UseItem', function(item)
     local src = source
+    --local degradeAmount = QBCore.Shared.Items[item.name:lower()]['degrade'] ~= nil and QBCore.Shared.Items[item.name:lower()]['degrade'] or 0.0
+
     if item and item.amount > 0 then
         if QBCore.Functions.CanUseItem(item.name) then
+          if item.info.quality ~= nil and item.info.quality == 0 then
+            TriggerClientEvent('QBCore:Notify', source, "This Item Is Broken!")
+          else
             QBCore.Functions.UseItem(src, item)
+          end
         end
     end
 end)
